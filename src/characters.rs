@@ -1,23 +1,33 @@
-pub struct Character {
-    pub key: &'static str,
-    pub name: &'static str,
-    pub quote: &'static str,
-    pub image_path: &'static str, // local path for now
+use serde::Deserialize;
+use std::fs;
+use crate
+
+pub struct Config {
+    character: Vec<Character>
 }
 
-pub fn all_characters() -> &'static [Character] {
-    &[
-        Character {
-            key: "phos",
-            name: "Phosphophyllite",
-            quote: "Even if it changes me… I still want to be useful.",
-            image_path: "assets/phos.jfif",
-        },
-        Character {
-            key: "cinnabar",
-            name: "Cinnabar",
-            quote: "Don’t come near me.",
-            image_path: "assets/HnK.jpg",
-        },
-    ]
+pub struct Character {
+    key: String,
+    character: String,
+    nickname: String,
+    quote: String,
+    source: String,
+    image_path: String,
 }
+
+pub fn get_all_character_quotes() -> Vec<Character> {
+
+    let filename = "characters/animanga.toml"; 
+    let contents = fs::read_to_string(filename)
+        .expect("Something went wrong reading the file");
+
+    let decoded: Config = toml::from_str(&contents)
+        .expect("Error parsing TOML");
+
+    for c in decoded.character {
+        println!("{} from {} says: \"{}\"", c.character, c.source, c.quote);
+    }
+
+    decoded.character
+}
+

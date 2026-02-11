@@ -1,16 +1,12 @@
+/* 
 use owo_colors::OwoColorize;
 use std::process::Command;
+use crate::characters::Character;
 
 pub fn render_with_chafa(path: &str, size: Option<(u16, u16)>) -> std::io::Result<()> {
 
-    let list = get_all_character_quotes();
-    
-    println!("Total characters loaded: {}", list.len());
-    
-    // Now you can access individual fields
-    if let Some(first) = list.first() {
-        println!("The first key is: {}", first.key);
-    }
+    println!("Total characters loaded: {}", path.len());
+
     let mut cmd = Command::new("chafa");
 
     cmd.arg("--symbols=block").arg("--colors=full"); // cmd.arg("--dither=none");
@@ -19,7 +15,7 @@ pub fn render_with_chafa(path: &str, size: Option<(u16, u16)>) -> std::io::Resul
         cmd.arg(format!("--size={}x{}", w, h));
     }
 
-    cmd.arg(path);
+    cmd.arg(&path);
 
     let status = cmd.status()?;
     if !status.success() {
@@ -38,3 +34,4 @@ pub fn print_character(ch: &Character) {
     println!("{} {}", "Name:".bold(), ch.name.bold());
     println!("{} {}", "Quote:".bold(), format!("“{}”", ch.quote).italic());
 }
+*/ 

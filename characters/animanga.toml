@@ -1,7 +1,7 @@
 [[character]]
 key = "phos"
 character="Phosphophyllite"
-nickname="IDK"
+nickname="none"
 quote = "You mustn't run away."
 source = "Houseki No Kuni"
 image_path = "assets/phos.jfif"
@@ -9,9 +9,11 @@ image_path = "assets/phos.jfif"
 [[character]]
 key = "klein_moretti"
 character="Klein Moretti"
-nickname="The Best Elder Brother, The Best younger Brother, The Best Colleague, Zhou Mingrou, Klein Moretti, Sherlock Moriaty, Gerhman Sparrow, Dwayne Dantes,
-Merlin Hermes, The Fool,  Angel who Redeems Mankind, Sea God, Craziest Hunter, Strongest Adventurer of the Five Seas, Angel of Redemption, Half-Lord of MysteriesKing of Space-Time,"
-quote = "A person who’s very sentimental;
+nickname="""
+The Best Elder Brother, The Best younger Brother, The Best Colleague, Zhou Mingrou, Klein Moretti, Sherlock Moriaty, Gerhman Sparrow, Dwayne Dantes,
+Merlin Hermes, The Fool,  Angel who Redeems Mankind, Sea God, Craziest Hunter, Strongest Adventurer of the Five Seas, Angel of Redemption, Half-Lord of MysteriesKing of Space-Time,
+"""
+quote = """A person who’s very sentimental;
 A person from Earth, but to a certain extent, a person who has been reconstructed into a new person because of the fusion with Klein Moretti’s memory fragments;
 A person who didn’t spend too much time with the Nighthawks but has had that period of time deeply influence his actions and choices;
 A person who tries to play safe and is afraid of danger but is able to change his mind at the critical moment;
@@ -24,4 +26,4 @@ A person who can overcome his psychological traumas but never crosses his bottom
 A person who feels embarrassed for his acting;
 He’s also a guardian, a miserable wretch that is constantly fighting against threats and madness!"
 source = "Lord of the Mysteries"
-image_path = "assets/phos.jfif"
+image_path = "assets/phos.jfif"""
